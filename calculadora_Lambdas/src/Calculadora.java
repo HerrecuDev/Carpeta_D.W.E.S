@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import Streams.Operacion;
+import streams.Operacion;
 
 public class Calculadora {
 
@@ -83,14 +83,8 @@ public class Calculadora {
                         Operacion op = mapOperaciones.get(intruccionArr[0]);
                         double resul = op.oper(oper1, oper2);
 
-                        if (oper2 == 0 && op.equals("div")) {
-
-                            System.out.println("No se puede dividir entre 0");
-                            
-                        }else{
-                            System.out.println("El resultado es : " + resul);
-                        }
-
+                        
+                        System.out.println("El resultado es : " + resul);
                         
                         
                         
