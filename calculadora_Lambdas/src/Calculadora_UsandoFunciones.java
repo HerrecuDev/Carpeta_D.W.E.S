@@ -47,8 +47,13 @@ public class Calculadora_UsandoFunciones {
                    
                     
                     
+                }
+                else if(intruccionArr[0].equals("salir") || intruccionArr[0].equals("exit")){
+
+                    System.out.println("HA FINALZADO LA EJECUCCION DE LA CALCULADORA");
+
                 }else{
-                    System.out.println("Operacion "  + intruccionArr [0] + " no contemplada");
+                    System.out.println("Operacion indicada no es posible de realizar" );
                 }
                 
 
@@ -61,7 +66,7 @@ public class Calculadora_UsandoFunciones {
         } while (opcion != intruccionArr[0]);
 
 
-        System.out.println("HA FINALZADO LA EJECUCCION DE LA CALCULADORA");
+        
         
 
 
@@ -152,9 +157,10 @@ public class Calculadora_UsandoFunciones {
            
 
             Operacion op = mapOperaciones.get(intruccionArr[0]);
-            if (op.equals("div") && oper2 == 0) {
+            if ((mapOperaciones.containsKey("div")) && (oper2 == 0)) {
 
                 System.out.println("No se puede Dividir entre 0");
+                resul = 0;
             
             }else{
 
