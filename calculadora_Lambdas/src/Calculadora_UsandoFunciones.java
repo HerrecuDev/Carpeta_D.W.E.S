@@ -30,11 +30,7 @@ public class Calculadora_UsandoFunciones {
         System.out.println("----------------------------------");
 
         do {
-           
-            
-            
-
-                
+     
                 if (validar()== true) {
 
                     double oper1 = parseo(intruccionArr[1]);
@@ -44,9 +40,7 @@ public class Calculadora_UsandoFunciones {
 
                     System.out.println("El resultado es = " + resul);
                     
-                   
-                    
-                    
+        
                 }
                 else if(intruccionArr[0].equals("salir") || intruccionArr[0].equals("exit")){
 
@@ -55,25 +49,12 @@ public class Calculadora_UsandoFunciones {
                 }else{
                     System.out.println("Operacion indicada no es posible de realizar" );
                 }
-                
-
-
-            
-           
-
-
+  
             
         } while (opcion != intruccionArr[0]);
 
 
-        
-        
-
-
-        
-
-        
-        
+        System.out.println();
     }
 
     //Para no repetirnos tanto seria lo suyo generar esta funcion :
@@ -121,8 +102,6 @@ public class Calculadora_UsandoFunciones {
                 datosOk = true;
                 
             }
-
-
                 
             return datosOk;
 
@@ -167,8 +146,6 @@ public class Calculadora_UsandoFunciones {
                 resul = op.oper(oper1, oper2);
 
             }
-            
-
             
             return resul;
                     
