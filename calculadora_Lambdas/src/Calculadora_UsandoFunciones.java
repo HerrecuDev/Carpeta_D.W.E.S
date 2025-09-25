@@ -29,9 +29,33 @@ public class Calculadora_UsandoFunciones {
 
         System.out.println("----------------------------------");
 
+
+            Operacion suma = (double x , double y) -> x+y;
+            Operacion resta = (double x , double y) -> x-y;
+            Operacion mult = (double x , double y) -> x*y;
+            Operacion div = (double x , double y) -> x/y;
+
+
+            //Declaramos el lambda y asigno el valor al objeto :
+            mapOperaciones.put("+", suma);
+            mapOperaciones.put("add", suma);
+
+            mapOperaciones.put("-", resta);
+            mapOperaciones.put("sub", resta);
+
+            mapOperaciones.put("*", mult);
+            mapOperaciones.put("mult", mult);
+
+            mapOperaciones.put("/", div);
+            mapOperaciones.put("div", div);
+
+
         do {
      
-                if (validar()== true) {
+                System.out.println("Escriba la operacion que desea hacer seguido de los numeros con espacio entre cada dato");
+                opcion = sc.nextLine().toLowerCase();
+
+                if (validar()) {
 
                     double oper1 = parseo(intruccionArr[1]);
                     double oper2 = parseo(intruccionArr[2]);
@@ -80,10 +104,6 @@ public class Calculadora_UsandoFunciones {
 
             boolean datosOk = false;
 
-            System.out.println("Escriba la operacion que desea hacer seguido de los numeros con espacio entre cada dato");
-            opcion = sc.nextLine().toLowerCase();
-
-
             //El trim es para borrar los espacios que hay antes y despues y el split quita el espacio entre los datos :
             intruccionArr = opcion.trim().split(" ");
 
@@ -94,7 +114,7 @@ public class Calculadora_UsandoFunciones {
                 
                 datosOk = false;
                 
-                
+                System.out.println("Error ha introducido mal los datos");
             
             }
 
@@ -110,25 +130,7 @@ public class Calculadora_UsandoFunciones {
 
         public static Double operar(double oper1,double oper2){
 
-            Operacion suma = (double x , double y) -> x+y;
-            Operacion resta = (double x , double y) -> x-y;
-            Operacion mult = (double x , double y) -> x*y;
-            Operacion div = (double x , double y) -> x/y;
-
-
-            //Declaramos el lambda y asigno el valor al objeto :
-            mapOperaciones.put("+", suma);
-            mapOperaciones.put("add", suma);
-
-            mapOperaciones.put("-", resta);
-            mapOperaciones.put("sub", resta);
-
-            mapOperaciones.put("*", mult);
-            mapOperaciones.put("mult", mult);
-
-            mapOperaciones.put("/", div);
-            mapOperaciones.put("div", div);
-
+            
             //Declaro el resultado 
             double resul = 0;
 
@@ -136,10 +138,9 @@ public class Calculadora_UsandoFunciones {
            
 
             Operacion op = mapOperaciones.get(intruccionArr[0]);
-            if ((mapOperaciones.containsKey("div")) && (oper2 == 0)) {
+            if (((intruccionArr[0].equals("div")) || intruccionArr[0].equals("/")) && (oper2 == 0)) {
 
                 System.out.println("No se puede Dividir entre 0");
-                resul = 0;
             
             }else{
 
