@@ -17,7 +17,7 @@ public class Calculadora_Eficaz {
     private static Scanner sc = new Scanner(System.in);
 
     private static String [] intruccionArr ;
-
+    //Comentario de prueba.
     //Geneamos las funciones : 
     //Para no repetirnos tanto seria lo suyo generar esta funcion :
         public static Double parseo(String str){
@@ -42,6 +42,8 @@ public class Calculadora_Eficaz {
                 
             }
             */
+
+            return true;
         }
 
         public static Boolean validar(){
