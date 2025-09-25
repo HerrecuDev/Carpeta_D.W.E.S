@@ -123,35 +123,41 @@ public class Calculadora_Eficaz {
         mapOperaciones.put("div", div);
 
 
+
+        //Caracteres a introducir :
+            String str = "Hola mundo";
+
+
+
     ////////////////////
-    ///
-    /// 
-     //Operaciones STR : 
+        ///
+        /// 
+        //Operaciones STR : 
 
-     OperacionesStr upper = a -> a.toUpperCase();
-     mapOperacionesStr.put("upper", upper);
+        OperacionesStr upper = a -> a.toUpperCase();
+        mapOperacionesStr.put("upper", upper);
 
      
-     do {
-     
-                System.out.println("Escriba la operacion que desea hacer seguido de los numeros con espacio entre cada dato");
-                opcion = sc.nextLine().toLowerCase();
-
-                if (validar()) {
-
-                    operar();
+        do {
         
-                }
-                else if(intruccionArr[0].equals("salir") || intruccionArr[0].equals("exit")){
+                    System.out.println("Escriba la operacion que desea hacer seguido de los numeros con espacio entre cada dato");
+                    opcion = sc.nextLine().toLowerCase();
 
-                    System.out.println("HA FINALZADO LA EJECUCCION DE LA CALCULADORA");
+                    if (validar()) {
 
-                }else{
-                    System.out.println("Operacion indicada no es posible de realizar" );
-                }
-  
+                        operar();
             
-        } while (opcion != intruccionArr[0]);
+                    }
+                    else if(intruccionArr[0].equals("salir") || intruccionArr[0].equals("exit")){
+
+                        System.out.println("HA FINALZADO LA EJECUCCION DE LA CALCULADORA");
+
+                    }else{
+                        System.out.println("Operacion indicada no es posible de realizar" );
+                    }
+    
+                
+            } while (opcion != intruccionArr[0]);
 
 
         System.out.println();
@@ -161,6 +167,6 @@ public class Calculadora_Eficaz {
      
 
         
-     }
-    
 }
+    
+
