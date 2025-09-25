@@ -57,13 +57,7 @@ public class Calculadora_UsandoFunciones {
 
                 if (validar()) {
 
-                    double oper1 = parseo(intruccionArr[1]);
-                    double oper2 = parseo(intruccionArr[2]);
-
-                    double resul = operar(oper1, oper2);
-
-                    System.out.println("El resultado es = " + resul);
-                    
+                    operar();
         
                 }
                 else if(intruccionArr[0].equals("salir") || intruccionArr[0].equals("exit")){
@@ -128,23 +122,30 @@ public class Calculadora_UsandoFunciones {
         }
 
 
-        public static Double operar(double oper1,double oper2){
+        public static Double operar(){
 
             
-            //Declaro el resultado 
+            //Declaro el resultado y los datos :
             double resul = 0;
+            double oper1 = parseo(intruccionArr[1]);
+            double oper2 = parseo(intruccionArr[2]);
+
+            Operacion op = mapOperaciones.get(intruccionArr[0]);
 
 
            
 
-            Operacion op = mapOperaciones.get(intruccionArr[0]);
+            
             if (((intruccionArr[0].equals("div")) || intruccionArr[0].equals("/")) && (oper2 == 0)) {
 
                 System.out.println("No se puede Dividir entre 0");
             
             }else{
 
-                resul = op.oper(oper1, oper2);
+
+                    resul = op.oper(oper1, oper2);
+
+                    System.out.println("El resultado es = " + resul);
 
             }
             
