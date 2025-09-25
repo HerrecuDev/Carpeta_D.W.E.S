@@ -38,10 +38,10 @@ public class Calculadora_Eficaz {
         }
         public static boolean validarSTr(String [] intruccinArr , Set<String> operaciones){
 
-            if (condition) {
+            /*if (condition) {
                 
             }
-
+            */
         }
 
         public static Boolean validar(){
