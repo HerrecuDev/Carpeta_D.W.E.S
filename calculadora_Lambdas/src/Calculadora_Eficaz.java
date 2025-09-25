@@ -129,7 +129,7 @@ public class Calculadora_Eficaz {
         //Caracteres a introducir :
             String str = "Hola mundo";
 
-
+        System.out.println("prueba");
 
     ////////////////////
         ///
