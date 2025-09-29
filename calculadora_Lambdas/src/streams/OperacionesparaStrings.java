@@ -4,7 +4,7 @@ import java.util.Map;
 
 //Firma del metodo : 
 
-public interface OperacionesStr {
+public interface OperacionesparaStrings {
 
         //
         //s -> s.toUpperCase()
@@ -12,7 +12,7 @@ public interface OperacionesStr {
 
     public String transforma(String str);
 
-    public static String trasformar(String [] intruccionesArr , Map<String , OperacionesStr> mapOperacionesStr){
+    public static String trasformar(String [] intruccionesArr , Map<String , OperacionesparaStrings> mapOperacionesStr){
 
         return mapOperacionesStr.get(intruccionesArr[0]).transforma(intruccionesArr[1]);
 

@@ -77,20 +77,6 @@ public class Calculadora_UsandoFunciones {
 
 
 
-    //Y la ampliacicón 2 :
-    /* 
-                ¿Es par?
-
-                ¿Es primo?
-
-                ¿Es múltiplo de 5?
-
-                ¿Está entre 10 y 100?
-
-    */
-
-
-
         //Declaramos un Mapa estatico : 
         public static void main(String[] args) throws Exception {
 
