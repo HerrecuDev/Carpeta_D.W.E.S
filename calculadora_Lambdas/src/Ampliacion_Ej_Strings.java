@@ -51,6 +51,23 @@ public class Ampliacion_Ej_Strings {
 
         }
 
+        //Realizamos un nuevo parseo para no repetirnos :
+        public static Double parseo(String input){
+
+            Double entrada = null;
+
+            try {
+                entrada = Double.parseDouble(input);
+            } catch (NumberFormatException e) {
+              
+                System.out.println("Indicacion introducida es incorrecta");
+            }
+
+            return entrada;
+
+
+        }
+
         public void revertir(String a){
 
         }
@@ -59,6 +76,19 @@ public class Ampliacion_Ej_Strings {
             int longitud = a.length();
 
             return longitud;
+
+        }
+
+        public static String realizar(){
+
+            //Declaro resultado y datos :
+            String result = "";
+            double frase = parseo(introStrings[1]);
+
+            OperacionesparaStrings op = mapStrings.get(introStrings[0]);
+
+            
+
 
         }
 
