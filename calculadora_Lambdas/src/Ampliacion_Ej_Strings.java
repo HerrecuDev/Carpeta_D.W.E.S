@@ -47,7 +47,7 @@ public class Ampliacion_Ej_Strings {
 
             }
 
-
+            
 
         }
 
@@ -107,6 +107,7 @@ public class Ampliacion_Ej_Strings {
             OperacionesparaStrings longitud;
             OperacionesparaStrings borrarEspacios = a -> a.trim();
 
+            System.out.println();
 
             mapStrings.put("Upper", mayuscula);
             mapStrings.put("Lower", mayuscula);
