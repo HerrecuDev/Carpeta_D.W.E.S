@@ -74,7 +74,7 @@ public class Ampliacion_Ej_Strings {
             //Declaro resultado y datos :
             String result = "";
             String frase = parseo(introStrings[1]);
-
+            //devuelve Nulo!!!!!
             OperacionesparaStrings op = mapStrings.get(introStrings[0]);
             System.out.println(op);
             result = op.transforma(frase);
