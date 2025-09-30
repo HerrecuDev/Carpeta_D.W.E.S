@@ -1,3 +1,5 @@
+import java.util.function.Supplier;
+
 public class JavaFunctionTest {
 
 
@@ -135,6 +137,11 @@ public class JavaFunctionTest {
         IFuncionOperacion ifo = (o1, o2) -> o1 * o2 * constante;
 
         Assertions.assertEquals(1234, ifo.operacion(10.0, 100.0));
+
+
+        //Nuevas formas de anotar lambdas :
+
+        Supplier<String> sup = new String();
 
     }
 
