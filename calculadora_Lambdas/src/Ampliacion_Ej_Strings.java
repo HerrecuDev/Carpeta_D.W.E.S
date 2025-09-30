@@ -21,43 +21,33 @@ public class Ampliacion_Ej_Strings {
 
             boolean formato = false;
 
-            
+            //Limpio los espacios :
+            introStrings = opcion.trim().split(" ");
 
-            if (introStrings.length <= 1) {
-
-                formato = false;
-                System.out.println("No ha introducido nada");
-                return formato;
-                
-            }
-            else if (introStrings.length <=2) {
+            if (!introStrings[0].equalsIgnoreCase("upper") && !introStrings[0].equalsIgnoreCase("lover") && !introStrings[0].equalsIgnoreCase("reverse") && !introStrings[0].equalsIgnoreCase("length") && !introStrings[0].equalsIgnoreCase("trimp")) {
 
                 formato = false;
-
-                System.out.println("Escriba la frase o palabra que desea interpretar");
-
-                return formato;
+                System.out.println("Introduzca bien lo que desea realizar");
                 
-            }
-            else{
-
+                
+            }else{
                 formato = true;
-
-                return formato;
-
             }
+
+            return formato;
+            
 
             
 
         }
 
         //Realizamos un nuevo parseo para no repetirnos :
-        public static Double parseo(String input){
+        public static String parseo(String a){
 
-            Double entrada = null;
+            String entrada = "";
 
             try {
-                entrada = Double.parseDouble(input);
+                entrada = String.valueOf(a);
             } catch (NumberFormatException e) {
               
                 System.out.println("Indicacion introducida es incorrecta");
@@ -83,11 +73,13 @@ public class Ampliacion_Ej_Strings {
 
             //Declaro resultado y datos :
             String result = "";
-            double frase = parseo(introStrings[1]);
+            String frase = parseo(introStrings[1]);
 
             OperacionesparaStrings op = mapStrings.get(introStrings[0]);
+            System.out.println(op);
+            result = op.transforma(frase);
 
-            
+            return result;
 
 
         }
@@ -110,10 +102,10 @@ public class Ampliacion_Ej_Strings {
             System.out.println();
 
             mapStrings.put("Upper", mayuscula);
-            mapStrings.put("Lower", mayuscula);
-            mapStrings.put("Reverse", mayuscula);
-            mapStrings.put("length", mayuscula);
-            mapStrings.put("trim", mayuscula);
+            mapStrings.put("Lower", minuscula);
+            //mapStrings.put("Reverse", revertir);
+            //mapStrings.put("length", longitud);
+            mapStrings.put("trim", borrarEspacios);
 
 
 
@@ -121,15 +113,20 @@ public class Ampliacion_Ej_Strings {
             while (!input.equals("salir")) {
 
                 System.out.println("Escriba lo que desea realizar , seguido de la palabra o frase :");
-                input = sc.nextLine();
+                opcion = sc.nextLine();
 
 
 
                 if (validarString()) {
 
+                    realizar();
+
+                    
 
                     
                 }else{
+                    
+                    System.out.println("Datos introducidos son erroneos");
 
                 }
 
